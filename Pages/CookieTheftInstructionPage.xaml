@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="DIAGmentia_UI_2.CookieTheftInstructionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DIAGmentia_UI_2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="textBlock" 
+                   HorizontalAlignment="Center"
+                   Margin="0,100,0,0" 
+                   TextWrapping="Wrap"
+                   FontStyle="Normal"
+                   FontSize="35"
+                   Foreground="#4aa3df"
+                   Text="INSTRUCTIONS" 
+                   VerticalAlignment="Top" 
+                   Width="261" 
+                   Height="61" 
+                   FontWeight="Bold"/>
+
+        <TextBlock x:Name="textBlock1" 
+                   HorizontalAlignment="Center"
+                   Margin="0,185,0,0" 
+                   FontSize="15"
+                   Foreground="#4aa3df"
+                   TextWrapping="Wrap" 
+                   Text="STEP 1: Click the START button." 
+                   VerticalAlignment="Top" 
+                   Width="292" 
+                   Height="27"
+                   FontWeight="Bold"/>
+
+        <TextBlock x:Name="textBlock2" 
+                   HorizontalAlignment="Center"
+                   Margin="0,215,0,0" 
+                   FontSize="15"
+                   Foreground="#4aa3df"
+                   TextWrapping="Wrap" 
+                   Text="STEP 2: Describe the cookie theft image." 
+                   VerticalAlignment="Top" 
+                   Width="292" 
+                   Height="27"
+                   FontWeight="Bold"/>
+
+        <TextBlock x:Name="textBlock3" 
+                   HorizontalAlignment="Center"
+                   Margin="0,245,0,0" 
+                   FontSize="15"
+                   Foreground="#4aa3df"
+                   TextWrapping="Wrap" 
+                   Text="STEP 3: Click the STOP button." 
+                   VerticalAlignment="Top" 
+                   Width="292" 
+                   Height="27"
+                   FontWeight="Bold"/>
+
+        <Button x:Name="QuitTest" 
+                Content="Quit Test" 
+                Background="#e74c3c"
+                Foreground="White"
+                HorizontalAlignment="Left"
+                Height="50"
+                Width="100"
+                Margin="50,289,0,0" 
+                VerticalAlignment="Top" Click="Click_Quick_Test"/>
+
+        <Button x:Name="NextStep" 
+                Content="Next Step" 
+                Background="#4aa3df"
+                Foreground="White"
+                HorizontalAlignment="Left"
+                Height="50"
+                Width="100"
+                Margin="398,289,0,0" 
+                VerticalAlignment="Top" Click="Click_Go_Cookie_Test"/>
+    </Grid>
+</Page>

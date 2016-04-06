@@ -1,0 +1,96 @@
+﻿<Page
+    x:Class="DIAGmentia_UI_2.Pages.CookieTheftPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DIAGmentia_UI_2"
+       xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:behaviors="using:DIAGmentia_UI_2.Behaviors"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ListView>
+            <ListView.Header>
+                <ScrollViewer ZoomMode="Enabled" MinZoomFactor="0.5"
+                              VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
+                <Image Source="ms-appx:///Assets/cookie.jpg" 
+                       x:Name="ParallaxImage" 
+                       Stretch="UniformToFill"
+                       Height="Auto"
+                       Width="Auto"
+                       Margin="0,0,0,0"/>
+                </ScrollViewer>
+            </ListView.Header>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem"
+                       >
+                    <Setter Property="Background" Value="White"
+                            />
+                </Style>
+            </ListView.ItemContainerStyle>
+            <Border Background="#2c3e50">
+            <TextBlock
+                x:Name="dictationTextBox"
+                Foreground="White"
+                FontSize="20"
+                TextAlignment="Left"
+                TextWrapping="Wrap"
+                Text="
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                Width="Auto"
+                Height="Auto"
+                Margin="0,0,0,0"
+                HorizontalAlignment="Center"                           
+                />
+            </Border>
+
+            <interactivity:Interaction.Behaviors>
+                <behaviors:ParallaxBehavior ParallaxContent="{Binding ElementName=ParallaxImage}" ParallaxMultiplier="-0.2"/>
+            </interactivity:Interaction.Behaviors>
+        </ListView>
+            
+                <Button 
+                    x:Name="TestControlBtn"
+                    Grid.Row="1"
+                    Content="START" 
+                    Height="50" 
+                    Width="Auto" 
+                    Margin="12,0,0,0"
+                    Foreground="White"
+                    FontSize="20"
+                    Background="#4aa3df" 
+                    FontWeight="Bold" Click="Test_Control_Click"/>
+
+            <ProgressBar 
+                         x:Name="ProgBar"
+                         Grid.Row="1" 
+                         Height="50"
+                         Width="Auto"
+                         Background="White"
+                         BorderBrush="Black"
+                         BorderThickness="2"
+                         Foreground="#e74c3c"
+                         Opacity="0.9"
+                         Margin="100,0,0,0" 
+                         Value="50" ValueChanged="ProgressBar_ValueChanged"
+                         />
+            <TextBlock 
+                x:Name="PercentText"
+                Grid.Row="1" 
+                Text="50%"
+                Margin="140,5,0,0"
+                FontSize="40"
+                Foreground="Black"           
+                />
+
+        </Grid>
+    </Grid>
+</Page>
